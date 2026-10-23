@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "GitVerse — фильтры релизов",
+  "version": "1.5.0",
+  "description": "Релизы, сортировка, статусы ревью и счётчики замечаний для dgurachevskii/manager.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gitverse.ru/dgurachevskii/manager/*"
+      ],
+      "js": [
+        "release-filter.js"
+      ],
+      "run_at": "document_idle",
+      "css": [
+        "pr-detail.css"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "GitVerse — фильтры релизов",
+    "default_popup": "popup.html"
+  }
+}
